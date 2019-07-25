@@ -1,0 +1,151 @@
+page-profil {
+  .item-md-md {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      border-radius: 11px;
+      position: relative;
+      font-size: 1.7rem;
+      color: #000;
+      background-color: #fff;
+      -webkit-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+      width: 337px;
+  }
+
+  .button-custom{
+      border-radius: 8px;
+      width: 98%;
+      box-shadow: none;
+      height: 63.09px;
+      width: 337px;
+  }
+  .list-md {
+      margin: 0;
+  }
+
+  img {
+      max-width: 100%;
+      border: 0;
+      width: 110px;
+      border-radius: 50px;
+      margin: 0 auto;
+      display: block;
+  }
+
+  ion-scroll{
+      width: 100%;
+      height: 440px;
+  }
+
+  .button-md {
+      border-radius: 4px;
+      height: 2.8em;
+      font-size: 1.6rem;
+      color: #D81B60;
+      background-color: white;
+      margin: 0.4rem 0.2rem;
+      padding: 0 1em;
+      font-weight: bolder;
+  }
+ ion-scroll {
+      width: 100%;
+      height: 393px;
+  }
+
+  .item-md-md2{
+      padding-left: 16px;
+      padding-left: 16px;
+      border-radius: 8px;
+      position: relative;
+      font-size: 1.7rem;
+      color: #000;
+      background-color: #fff;
+      -webkit-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+  }
+
+  .searchbar-md .searchbar-search-icon {
+      left: 9px;
+      top: 9px;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      margin-left: 0px;
+      background-repeat: no-repeat;
+      background-size: 13px;
+  }
+
+  .searchbar-md .searchbar-input {
+      padding: 0 28px;
+      border-radius: 5px;
+      height: 3rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #000;
+      background-color: #fff;
+      height: 2.6em;
+      width: 325px;
+  }
+
+  ion-icon {
+      &[class*="custom-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+        font-weight: bolder;
+      }
+    
+      &[class*="custom-city"] {
+        mask-image: url(https://img.icons8.com/wired/64/000000/city.png);
+      }
+    }
+
+    ion-icon {
+      &[class*="custom-"] {
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+        font-weight: bolder !important;
+      }
+    
+      &[class*="custom-address"] {
+        font-weight: bolder !important;
+        mask-image: url(https://img.icons8.com/wired/64/000000/address.png);
+      }
+    }
+  .ion-md-camera:before {
+    content: "\f3f6";
+    font-size: xx-large;
+    margin-left: 55%;
+    margin-top: -12%;
+    position: fixed;
+     
+  }
+  .scroll-content {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+}
+b, strong {
+  font-weight: bold;
+  text-align: ter;
+  margin-right: 17%;
+}
+}
+

@@ -34,7 +34,7 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #D81B60,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -84,5 +84,11 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+@font-face{
+  font-family: JTUSjIg1_i6t8kCHKm459Wlhyw;
+  src : url('/assets/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2') format('woff2');
+}
+*{
+  font-family:  JTUSjIg1_i6t8kCHKm459Wlhyw;
+}
+

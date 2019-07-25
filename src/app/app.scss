@@ -14,3 +14,115 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.title{
+    text-align: center;
+    font-family: initial;
+ }
+    .toolbar-title-md {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: white;
+        pointer-events: auto;
+        font-family: initial;
+        
+    }
+    .bar-button-default-md, .bar-button-default.bar-button-md-default, .bar-button-clear-md-default {
+        color: #D81B60;
+      
+    }
+    .header-md .toolbar-background-md, .footer-md .toolbar-background-md {
+        border-style: solid;
+        
+       border-color: transparent
+    }
+    .background
+    {
+    background-image: url('../assets/imgs/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .background1
+    {
+    background-color: #D81B60
+    }
+  .item-md {
+      
+        padding-left: 16px;
+        padding-left: 16px;
+        border-radius: 0;
+        position: relative;
+        font-size: 1.7rem;
+        color: #000;
+        background-color: white;
+        -webkit-transition: background-color 200ms linear;
+        transition: background-color 200ms linear;
+    }
+    ion-icon {
+        &[class*="custom-"] {
+          mask-size: contain;
+          mask-position: 50% 50%;
+          mask-repeat: no-repeat;
+          background: currentColor;
+          width: 1em;
+          height: 1em;
+          font-weight: bolder !important;
+        }
+      
+        &[class*="order"] {
+          font-weight: bolder !important;
+          mask-image: url(https://icons8.com/icon/4255/purchase-order);
+        }
+      }
+    ion-icon {
+        &[class*="custom-"] {
+          mask-size: contain;
+          mask-position: 50% 50%;
+          mask-repeat: no-repeat;
+          background: currentColor;
+          width: 1em;
+          height: 1em;
+          font-weight: bolder !important;
+        }
+      
+        &[class*="ios-paper-plane-outline"] {
+          font-weight: bolder !important;
+          mask-image: url(https://img.icons8.com/wired/64/000000/address.png);
+        }
+      }
+    .item-md ion-avatar ion-img, .item-md ion-avatar img {
+        border-radius: 20%;
+        overflow: hidden;
+        width: 45%;
+        height: 120px;
+    }
+    .ion-md-camera:before {
+        content: "\f3f6";
+        font-size: -webkit-xxx-large;
+        margin-left: 34%;
+        margin-top: -16%;
+        position: fixed;
+    }
+
+    
+    .gm-ui-hover-effect {
+        opacity: .6;
+        display: none;
+      }
+      .alert-md .alert-title {
+        font-size: 17px;
+    }
+  
+      .header-md::after {
+        left: 0;
+        bottom: -5px;
+        background-position: left 0 top -2px;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-repeat: repeat-x;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMV…h/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMog);
+        content: "";
+      }
+    

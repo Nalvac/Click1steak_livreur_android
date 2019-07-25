@@ -1,0 +1,80 @@
+page-maps {
+
+  #map {
+      height: 100%;
+    }
+
+    .label{
+      color : red;
+    }
+
+    button {
+      border: 0;
+      font-family: inherit;
+      font-style: inherit;
+      font-variant: inherit;
+      line-height: 1;
+      text-transform: none;
+      cursor: pointer;
+      -webkit-appearance: button;
+      display: none;
+  }
+  ion-scroll {
+    position: relative;
+    display: inherit;
+}
+.card-header-md {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0px;
+  margin: 0px;
+}
+ion-scroll {
+position: relative;
+display: contents;
+}
+.thumnails{
+overflow-x: scroll;
+overflow-y: hidden;
+margin-top: 0%;
+.list-thumbnail{
+    height: 100%;
+    white-space: nowrap;
+    .img-thumb{
+      display: inline-block;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 3px;
+      width: 83.75%;
+      height: 122px;
+      margin: 0 2px 0 0;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 13px;
+    }
+}
+}
+.popup-bubble {
+/* Position the bubble centred-above its parent. */
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%, -100%);
+/* Style the bubble. */
+background-color: white;
+padding: 0px;
+border-radius: 0px;
+font-family: sans-serif;
+overflow-y: auto;
+max-height: 60px;
+//box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+}
+b, strong {
+font-weight: bold;
+text-align: ter;
+margin-right: 17%;
+}
+
+
+}

@@ -1,0 +1,53 @@
+page-connexion {
+    .background
+    {
+    background-image: url('../assets/imgs/ground-meat.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .card-md {
+        margin: 12px;
+        border-radius: 2px;
+        width: calc(100% - 24px);
+        font-size: 1.4rem;
+        background: none;
+        box-shadow: none;
+    }
+    .item-md{
+        border-radius: 10px;
+    }
+    .div{
+        text-align: center;
+        margin-top: 28%;       
+    }
+    .button-md{
+        width: 209px;
+        display: block; margin: 0 auto;
+        background-color: #D81B60;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    .text-input-md {
+        margin: 11px 8px 11px 0;
+        padding: 0;
+        width: calc(100% - 8px);
+        text-align: center;        
+    }
+    .button-md.activated{
+        background-color: #D81B60;
+    }
+    .ion-md-eye:before {
+        content: "\f425";
+        font-size: x-large;
+        color:  black;
+    }
+    .ion-md-eye-off:before {
+        content: "\f17a";
+        font-size: x-large;
+        color:  black;
+    }
+    a {
+        color: white;
+    }
+}

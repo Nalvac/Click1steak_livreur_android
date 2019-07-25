@@ -1,1 +1,29 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu id="menuLivraison" [content]="content" style="background-color: rgb(80, 76, 76)">
+
+    <ion-content class="background1">
+        <div style="float:right ; background-color : none">
+            <button ion-button menuToggle style="background-color : none; -webkit-box-shadow :none; font-size: 1.8rem;">
+                <ion-icon name="menu"></ion-icon>
+              </button>
+        </div>  
+         
+          <ion-grid style="width: 160px;     margin-left: 25%;">
+            
+               
+                <img  style="border-radius:50%" [src]="avatar">
+            
+          </ion-grid>
+          <div style="text-align: center; color : white" >
+          <p>{{Nom}} {{Prenom}}</p>
+         
+        </div>
+        <ion-list style="margin :5%">
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHome()"><ion-icon ios="ios-paper"></ion-icon>&nbsp;&nbsp;Nouvelles Commandes</button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHisto()" [disabled]="accueil"><ion-icon ios="ios-refresh-circle"></ion-icon> &nbsp;&nbsp;Mes Historiques</button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onParam()"><ion-icon ios="ios-settings"></ion-icon>&nbsp;&nbsp;Mes Paramètres</button>      
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onCon()"><ion-icon ios="ios-power"></ion-icon>&nbsp;&nbsp;Déconnexion </button>
+        </ion-list>
+    </ion-content>
+  </ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

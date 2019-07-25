@@ -1,0 +1,137 @@
+<!--
+  Generated template for the InscriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding class=" background" >
+  <ion-card style="padding-top: 0%;"> 
+    <ion-card>
+        <ion-card-content  style="text-align : center"  >
+          
+            <ion-img width="140" height="140" src="assets/imgs/logo2606_1024_Amen.png"  style="background-color: transparent"></ion-img>
+           
+        </ion-card-content>
+     </ion-card>
+
+      <form [formGroup]= "formGroup" >
+        <ion-card-content>
+          <div *ngIf="etape==1">
+          <ion-item >              
+                <ion-input placeholder="Nom"  [formControl]= "nom" ></ion-input>
+            </ion-item>
+            <ion-label *ngIf="nom.hasError('required') && nom.touched">
+                    <p style="color :white"> *Enter votre nom</p>
+                  </ion-label>
+            <ion-item style="margin-top : 5%" >
+                <ion-input placeholder="Prénom"  [formControl]="prenom"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="prenom.hasError('required') && prenom.touched">
+                    <p style="color :white"> *Enter votre prénom</p>
+                  </ion-label>
+            <ion-item style="margin-top : 5%" >
+                <ion-input placeholder="Numéro de téléphone" [formControl]="telephone"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="telephone.hasError('required') && telephone.touched">
+                    <p style="color :white"> *Enter votre téléphone</p>
+                  </ion-label>
+          <!---  <button ion-button style="margin-top : 5%" id="button-ios">Ajouter votre pièce</button>-->
+
+          </div>
+          <div *ngIf="etape==2">
+              <ion-item >              
+                    <ion-input placeholder="Ville" [formControl]="ville" ></ion-input>
+                </ion-item>
+                <ion-label *ngIf="ville.hasError('required') && ville.touched">
+                        <p style="color :white"> *Enter votre ville</p>
+                      </ion-label>
+                <ion-item style="margin-top : 5%" >
+                    <ion-input placeholder="Adresse"  [formControl]="adresse"></ion-input>
+                </ion-item>
+                <ion-label *ngIf="adresse.hasError('required') && adresse.touched">
+                        <p style="color :white"> *Enter votre adresse</p>
+                      </ion-label>
+                <ion-item style="margin-top : 5%" >
+                    <ion-input placeholder="Code postal" [formControl]="codePostal"></ion-input>
+                </ion-item>
+                <ion-label *ngIf="codePostal.hasError('required') && codePostal.touched">
+                        <p style="color :white"> *Enter votre code Postal</p>
+                      </ion-label>
+                <ion-item style="margin-top : 5%" >
+                        <ion-input  placeholder="Complément d’adresse" [formControl]="ComplementAdresse" ></ion-input>
+                    </ion-item>
+               <ion-item style="margin-top : 5%">               
+                <ion-label> Moyen de déplacement</ion-label>
+                <ion-select [(ngModel)]="deplacementt" [ngModelOptions]="{standalone: true}" cancelText="Annuler">
+                  <ion-option value="Vélo">Vélo</ion-option>
+                  <ion-option value="Moto">Moto</ion-option>
+                  <ion-option value="Voiture">Voiture</ion-option>
+                </ion-select>                   
+                 </ion-item>                
+           </div>
+           <div *ngIf="etape==3">
+              <ion-item >              
+                    <ion-input  [(ngModel)]="maill" type="email" placeholder="Email" [formControl]="email"></ion-input>
+                </ion-item>
+                <ion-label *ngIf="email.hasError('required') && email.touched">
+                        <p style="color :white"> *Enter votre Email</p>
+                      </ion-label>
+                <ion-item style="margin-top : 5%" >
+                    <ion-input  [(ngModel)]="passwordd" placeholder="Mot de passe"  [formControl]="password" [type]="passWordType"></ion-input>
+                   <button ion-button clear item-end style="background-color: white; width: 22px;" (click)="voirPassWord()"> <ion-icon [name]="passIcon"  ></ion-icon> </button>
+
+                </ion-item>
+                <ion-label *ngIf="email.hasError('required') && email.touched">
+                    <p style="color :white"> *Enter votre Mot de Passe</p>
+                  </ion-label>
+                <ion-item style="margin-top : 5%;" >
+                    <ion-input placeholder="Confirmer mot de passe" [formControl]="Confirmpassword" [type]="passWordType"></ion-input>
+            <button ion-button clear item-end style="background-color: white; width: 22px;" (click)="voirPassWord()"> <ion-icon [name]="passIcon"  ></ion-icon> </button>
+
+                </ion-item>
+                <ion-label *ngIf="email.hasError('required') && email.touched">
+                    <p style="color :white"> *Confirmer votre Mot de Passe</p>
+                  </ion-label>
+                 
+                    <div style="margin-top : 5%;">
+                    <ion-checkbox [(ngModel)]="condition"  [ngModelOptions]="{standalone: true}" color="green" checked="false"></ion-checkbox>
+                     <span style="color: white;">J'accepte les </span><a href="#" style="color: white;">conditions générales d'utilisation</a>
+                   </div>
+                <button style="margin-top : 8%;"  ion-button block (click)="Ouvetape()"  id="button-ios" [disabled]="ionViewWillEnter()" class="button-ios.activatedd" (click)="onEnreigiistrer()">Enreigistré</button>
+
+           </div>
+        </ion-card-content>
+    </form>
+        <div style="text-align : center; color : white;margin-top: inherit; margin-top: 2%">
+
+        <ion-icon [name]="radio1"></ion-icon>
+        <ion-icon [name]="radio2"></ion-icon>
+        <ion-icon [name]="radio3"></ion-icon>
+      </div>
+   
+        <ion-row>
+          <ion-col>
+              
+                  <button ion-button clear icon-only block (click)="OuvetapePre()" [disabled]="precedent" ><ion-icon  style="color: white"  name="arrow-round-back"></ion-icon></button>
+                
+          </ion-col>
+
+          <ion-col>
+             
+                  <button ion-button clear icon-only block (click)="Ouvetape()" [disabled]="suivant" ><ion-icon style="color: white"   name="arrow-round-forward"></ion-icon></button>
+              
+          </ion-col>
+
+        </ion-row>
+  
+   
+        <div style="text-align: center; margin-bottom: 0%">
+
+                <ion-label style="color :white;">Vous êtes membre ? &nbsp;&nbsp;&nbsp;<span  (click)="ouvConnexion()" style="color : #D81B60; text-decoration: underline" >Connectez vous.</span></ion-label>
+                 
+             </div>
+    </ion-card>
+
+</ion-content>

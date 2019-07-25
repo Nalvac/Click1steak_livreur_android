@@ -1,0 +1,75 @@
+<!--
+  Generated template for the ProfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+  <ion-toolbar>
+      
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="tilte"  >
+        <strong style="color : #D81B60" >Profil</strong>
+      </ion-title>
+           
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content class="background">
+    
+      <div style="height: 0px;">
+        <ion-grid style="margin-bottom: 10%">
+          <ion-row>
+            <ion-col>
+             <div>
+              <img  style="margin-top: -2%;"  [src]="avatar">
+              <ion-icon md="md-camera" (click)=" getImage() " ></ion-icon>            
+              <p style="color: white; font-weight: bolder; text-align: center;margin-top: 2%;">{{Nom}} {{Prenom}}</p>
+            </div>
+            </ion-col>
+          </ion-row> 
+        </ion-grid>
+      </div> 
+      <div style="background-image: url('assets/imgs/background.png'); height: 165px;">
+      </div>
+     
+  <ion-scroll scrollY="true" scrollX="false" style="background-image: url('assets/imgs/background.png'); ">
+
+  <ion-item-divider style="background-color: #D81B60; color: white">INFORMATIONS GENERALES</ion-item-divider>
+      
+          <ion-list>
+            <button ion-item (click)="modifyLastname()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-person-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre nom</button>
+            <button ion-item (click)="modifyFirstname()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-person-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre prénom</button>
+            <button ion-item (click)="modifyTelephone()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-call-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre téléphone</button>
+        </ion-list>
+  <ion-item-divider style="background-color: #D81B60; color: white">ADRESSE</ion-item-divider>
+       
+        <ion-list>
+              <button ion-item (click)="modifyAddress()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="custom-address" md="custom-address" ></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre adresse</button>
+              
+              <button ion-item (click)="modifyCode()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-paper-plane-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre code postal</button>
+              <button ion-item (click)="modifyCity()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-city-outline" name="custom-city" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre ville</button>   
+        </ion-list>
+  <ion-item-divider style="background-color: #D81B60; color: white"> IDENTIFICATION</ion-item-divider>
+               
+        <ion-list>
+            <button ion-item (click)="modifyMail()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-mail-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre adresse e-mail</button>
+            <button ion-item (click)="modifyPassword()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" name="ios-lock-outline" color="pink"></ion-icon>&nbsp;&nbsp;Consulter/Modifier votre mot de passe </button>        
+          </ion-list>
+  <ion-item-divider style="background-color: #D81B60; color: white">Déplacement</ion-item-divider>
+          
+        <ion-list>
+              <button ion-item (click)="onDeplacement()"><ion-icon style="font-size: 1.3em; font-weight: bolder;color:#D81B60;" md="md-bicycle" color="pink"></ion-icon>&nbsp;&nbsp;Votre moyen de déplacement</button>     
+        </ion-list>
+       
+      </ion-scroll>
+
+      
+  
+  
+</ion-content>
+

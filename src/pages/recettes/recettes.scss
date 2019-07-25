@@ -1,0 +1,60 @@
+page-recettes {
+    img {
+        max-width: 100%;
+        border: 0;
+        border-radius: 50%;
+    }
+    .item-md {
+        padding-left: 16px;
+        padding-left: 16px;
+    }
+    hr {
+        display: block;
+        clear: both;
+        height: 0;
+        padding: 0;
+        border: 0;
+        font-family: arial;
+        text-align: center;
+        font-size: 60px;
+        line-height: 5;
+        color: white
+    }
+
+    .item-md {
+        padding-left: 16px;
+        padding-left: 4px;
+        border-radius: 0;
+        position: relative;
+        font-size: 1.7rem;
+        color: #000;
+        background-color: white;
+        -webkit-transition: background-color 200ms linear;
+        transition: background-color 200ms linear;
+    }
+    .item-md p {
+        overflow: inherit;
+        font-size: 1.4rem;
+        line-height: normal;
+        text-overflow: inherit;
+        color: white;
+        margin: 0 0 2px;
+    }
+    .button-md{
+        width: 209px;
+        display: block; margin: 0 auto;
+        background-color: white;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    .button-md.activated{
+      
+        background-color: white;
+  
+    }
+    b, strong {
+        font-weight: bold;
+        text-align: ter;
+        margin-right: 17%;
+    }
+}

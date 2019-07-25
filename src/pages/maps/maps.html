@@ -1,0 +1,47 @@
+<!--
+  Generated template for the MapsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+      
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="tilte"  >
+          <strong  style="color : #D81B60">Commandes</strong>
+        </ion-title>
+             
+  </ion-toolbar>
+
+ 
+</ion-header>
+
+
+<ion-content *ngIf="!newMap">
+
+  <div class="thumnails">
+ 
+    <div class="list-thumbnail">
+        <div class="img-thumb" *ngFor="let p of commande" (click)="openPage(p)">
+            <p> {{p.name}}</p>
+            <p>{{p.adresseBoucher}}</p>
+            <p> {{p.nom}} {{p.prenom}} </p>
+            <p>{{p.adresse}}</p>
+        </div>
+  
+  
+      </div> 
+  </div>
+  <ion-card-content style ="height: 82%;" #map id="map">
+
+  </ion-card-content>
+
+</ion-content>
+
+<ion-content *ngIf="newMap">
+
+  <div style ="height: 95%;"  #map id="map"> </div>
+</ion-content>
