@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-angular';
@@ -28,6 +29,7 @@ import { HTTP } from '@ionic-native/http';
 import { Crop } from '@ionic-native/crop';
 import { AngularFireModule } from '@angular/fire';
 import { LaunchNavigatorOptions, LaunchNavigator } from '@ionic-native/launch-navigator';
+import { CommandePage } from '../pages/commande/commande';
 
 export var config = {
   apiKey: "AIzaSyA3cIp5YWe-LeUpkaXEA-Z500gamLItwTs",
@@ -41,7 +43,6 @@ export var config = {
 @NgModule({
   declarations: [
     MyApp,
- 
     ConnexionPage,
     InscriptionPage,
     CommandesPage,
@@ -49,7 +50,8 @@ export var config = {
     ProfilPage,
     TabsPage,
     MapsPage,
-  
+    CommandePage,
+    HomePage
   ],
   imports: [
 
@@ -62,7 +64,6 @@ export var config = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
- 
     ConnexionPage,
     InscriptionPage,
     CommandesPage,
@@ -70,8 +71,8 @@ export var config = {
     ProfilPage,
     TabsPage,
     MapsPage,
-
-    
+    CommandePage,
+    HomePage
   ],
   providers: [
     Geolocation,
