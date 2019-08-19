@@ -10,6 +10,7 @@ import { MapsPage } from '../pages/maps/maps';
 import { ProfilPage } from '../pages/profil/profil';
 import { FCM } from '@ionic-native/fcm';
 import { RecettesPage } from '../pages/recettes/recettes';
+import { BrowserTab } from '@ionic-native/browser-tab';
 @Component({
   templateUrl: 'app.html'
 })
@@ -20,7 +21,7 @@ export class MyApp {
   public Nom; Prenom;avatar;mail;password : string;
   firebase_token_user: any;
   public accueil : string;
-  constructor(public fcm : FCM, public events: Events,public http : Http, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
+  constructor(public browserTab: BrowserTab,public fcm : FCM, public events: Events,public http : Http, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
      public menuCtrl : MenuController, public storage : Storage) {
       
       events.subscribe('user', (Nom, Prenom) => {
@@ -67,7 +68,17 @@ export class MyApp {
     
  
   }
-
+  onBrowserTab(){    
+    this.browserTab.isAvailable()
+    .then(isAvailable => {
+      if (isAvailable) {
+        this.browserTab.openUrl('https://clic1steak.fr/account/bank-account');
+      } else {
+        // open URL with InAppBrowser instead or SafariViewController
+      }
+    });
+    this.menuCtrl.close();
+  }
   onNavigat(page : any ){
     this.content.setRoot(page);
     this.menuCtrl.close();

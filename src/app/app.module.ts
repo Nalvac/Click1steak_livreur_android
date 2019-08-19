@@ -30,6 +30,8 @@ import { Crop } from '@ionic-native/crop';
 import { AngularFireModule } from '@angular/fire';
 import { LaunchNavigatorOptions, LaunchNavigator } from '@ionic-native/launch-navigator';
 import { CommandePage } from '../pages/commande/commande';
+import { BrowserTab } from '@ionic-native/browser-tab';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 export var config = {
   apiKey: "AIzaSyA3cIp5YWe-LeUpkaXEA-Z500gamLItwTs",
@@ -77,6 +79,8 @@ export var config = {
   providers: [
     Geolocation,
     StatusBar,
+    InAppBrowser,
+    BrowserTab,
     SplashScreen,
     Camera,
     FileTransfer,

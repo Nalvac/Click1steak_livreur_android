@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import { Storage } from '@ionic/storage';
 import { Http, RequestOptions,Headers } from '@angular/http';
 import { FCM } from '@ionic-native/fcm';
-
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 @Component({
   selector: 'page-connexion',
   templateUrl: 'connexion.html',
@@ -26,7 +26,7 @@ export class ConnexionPage {
   seePassWord : boolean = true;
   passIcon : string = 'eye-off'
   public avatar;errMessage;maill;passwordd : string;
-  constructor(public loadingCtrl : LoadingController, public fcm: FCM , public events: Events,private storage: Storage,public alert: AlertController,   public http : Http,public navCtrl: NavController, public navParams: NavParams, public menu: MenuController,public formbuilder:FormBuilder) {
+  constructor(private iab: InAppBrowser,public loadingCtrl : LoadingController, public fcm: FCM , public events: Events,private storage: Storage,public alert: AlertController,   public http : Http,public navCtrl: NavController, public navParams: NavParams, public menu: MenuController,public formbuilder:FormBuilder) {
    
     this.formGroup = formbuilder.group({
        mail : ['',[ Validators.required, Validators.email]],
@@ -59,7 +59,7 @@ export class ConnexionPage {
     this.navCtrl.push(InscriptionPage)
   }
   passwordForget(){
-    let alert1 = this.alert.create({
+    /*let alert1 = this.alert.create({
       title: 'Clic1Steak',
       subTitle: 'Entrer votre Mail ',
       
@@ -93,7 +93,17 @@ export class ConnexionPage {
         }
       ]
       });
-      alert1.present();
+      alert1.present();*/
+
+      const browser = this.iab.create('https://clic1steak.fr/password/reset');
+
+       
+        browser.on('loadstop').subscribe(event => {
+          browser.insertCSS({ code: "body{color: red;" });
+        });
+
+        
+
   
    
   }

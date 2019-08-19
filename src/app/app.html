@@ -19,10 +19,11 @@
          
         </div>
         <ion-list style="margin :5%">
-            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHome()"><ion-icon ios="ios-paper"></ion-icon>&nbsp;&nbsp;Nouvelles Commandes</button>
-            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHisto()" [disabled]="accueil"><ion-icon ios="ios-refresh-circle"></ion-icon> &nbsp;&nbsp;Mes Historiques</button>
-            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onParam()"><ion-icon ios="ios-settings"></ion-icon>&nbsp;&nbsp;Mes Paramètres</button>      
-            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onCon()"><ion-icon ios="ios-power"></ion-icon>&nbsp;&nbsp;Déconnexion </button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHome()"><ion-icon name="ios-paper"></ion-icon>&nbsp;&nbsp;Nouvelles Commandes</button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onHisto()" [disabled]="accueil"><ion-icon name="ios-refresh-circle"></ion-icon> &nbsp;&nbsp;Mes Historiques</button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onBrowserTab()" [disabled]="accueil"><ion-icon name="ios-card"></ion-icon> &nbsp;&nbsp;IBAN</button>
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onParam()"><ion-icon name="ios-settings"></ion-icon>&nbsp;&nbsp;Mes Paramètres</button>      
+            <button style="color:  white; background-color:  transparent; font-weight: bold" ion-item (click)="onCon()"><ion-icon name="ios-power"></ion-icon>&nbsp;&nbsp;Déconnexion </button>
         </ion-list>
     </ion-content>
   </ion-menu>
