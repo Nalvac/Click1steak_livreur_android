@@ -32,7 +32,7 @@ import { LaunchNavigatorOptions, LaunchNavigator } from '@ionic-native/launch-na
 import { CommandePage } from '../pages/commande/commande';
 import { BrowserTab } from '@ionic-native/browser-tab';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
+import firebase from 'firebase';
 export var config = {
   apiKey: "AIzaSyA3cIp5YWe-LeUpkaXEA-Z500gamLItwTs",
   authDomain: "clic1steak-ab43e.firebaseapp.com",
@@ -41,7 +41,18 @@ export var config = {
   storageBucket: "clic1steak-ab43e.appspot.com",
   messagingSenderId: "1021593324196"
 };
+ 
+var firebaseConfig = {
+  apiKey: "AIzaSyDr-ZcmV-34BLWYLDa9mlaurQTsCRBzfZA",
+  authDomain: "clic1steak-livreur.firebaseapp.com",
+  databaseURL: "https://clic1steak-livreur.firebaseio.com",
+  projectId: "clic1steak-livreur",
+  storageBucket: "",
+  messagingSenderId: "241613038373",
+  appId: "1:241613038373:web:ee6302fe1f9554e3"
+};
 
+firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
     MyApp,
