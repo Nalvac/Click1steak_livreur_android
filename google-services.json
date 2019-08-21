@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "241613038373",
+    "firebase_url": "https://clic1steak-livreur.firebaseio.com",
+    "project_id": "clic1steak-livreur",
+    "storage_bucket": "clic1steak-livreur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241613038373:android:f5630478d6fc2589",
+        "android_client_info": {
+          "package_name": "com.livreur.clic1steak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241613038373-830bip40j6k4vc5kk6l5rcnm7cm67o3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdzs0q81yGCMqEwetBXwqS-S15a5kLHoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241613038373-830bip40j6k4vc5kk6l5rcnm7cm67o3e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "241613038373-9f8n00q4318kkg5vgplpl6u607ispko7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.livreur.clic1steak"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
